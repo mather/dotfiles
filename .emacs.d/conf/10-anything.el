@@ -1,7 +1,8 @@
 ;; anything
 ;; (auto-install-batch 'anything) to install
-(when (require 'anything nil t)
+;; M-x auto-install-batch RET anything RET
 
+(when (require 'anything nil t)
 
   ;; anything-config
   (when (require 'anything-config nil t)

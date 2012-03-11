@@ -20,27 +20,8 @@
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/conf")
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; auto-install.el
-(when (require 'auto-install nil t)
-  (setq auto-install-directory "~/.emacs.d/elisp/")
-  (auto-install-update-emacswiki-package-name t)
-  ;;(setq url-proxy-services '(("http" . "localhost:8022")))
-  (auto-install-compatibility-setup))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; package.el
-(when (require 'package nil t)
-  ;; Marmalade repos
-  (add-to-list 'package-archives
-               '("Marmalade" . "http://marmalade-repo.org/packages/"))
-  ;; ELPA repos
-  (add-to-list 'package-archives
-               '("ELPA" . "http://tromey.com/elpa/"))
-  (package-initialize))
-
-
 ;;; *.~ とかのバックアップファイルを作らない
 ;;(setq make-backup-files nil)
-
 
 ;;; .#* とかのバックアップファイルを作らない
 ;;(setq auto-save-default nil)
@@ -62,16 +43,11 @@
 
 
 ;; Interactively Do Things (highly recommended, but not strictly required)
-(require 'ido)
-(ido-mode t)
-
-;; color-theme
-(when (require 'color-theme nil t)
-  (color-theme-initialize)
-  (color-theme-tty-dark))
+(when (require 'ido nil t)
+  (ido-mode t))
 
 ;; 現在行の強調
-(global-hl-line-mode nil)
+;;(global-hl-line-mode nil)
 
 ;; paren-mode(対応する括弧の強調)
 (setq show-paren-delay 0)
@@ -79,5 +55,6 @@
 ;; 対応する括弧まですべて強調
 (setq show-paren-style 'expression)
 ;; フェイスを設定
+(set-face-foreground 'show-paren-match-face nil)
 (set-face-background 'show-paren-match-face nil)
-(set-face-underline-p 'show-paren-match-face "aquablue")
+(set-face-underline-p 'show-paren-match-face "white")

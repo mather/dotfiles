@@ -15,7 +15,5 @@
 ;; show battery
 ;;(display-battery-mode t)
 
-
-
-;;;;;;;;;;;;;;;;;;;; title bar setting
+;; title bar setting [full path]
 (setq frame-title-format "%f")
