@@ -1,3 +1,6 @@
 [submodule ".emacs.d/public_repos/elscreen"]
 	path = .emacs.d/public_repos/elscreen
 	url = https://github.com/knu/elscreen.git
+[submodule ".emacs.d/public_repos/markdown-mode"]
+	path = .emacs.d/public_repos/markdown-mode
+	url = git://jblevins.org/git/markdown-mode.git

@@ -1,4 +1,6 @@
-.*~
 *~
 *.elc
-public_repos/
+.emacs.d/elisp/
+.emacs.d/elpa/
+.emacs.d/url/
+!.gitkeep
