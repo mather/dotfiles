@@ -42,7 +42,6 @@
 ;; reject opening messages
 (setq inhibit-startup-message t)
 
-
 ;; Interactively Do Things (highly recommended, but not strictly required)
 (when (require 'ido nil t)
   (ido-mode t))
@@ -75,3 +74,33 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; eval-after-autoload
+;; https://gist.github.com/cvmat/3499459
+;;
+;; Example with after-body.
+;; (eval-after-autoload-if-found
+;;  '(cycle-buffer cycle-buffer-backward) "cycle-buffer" nil t nil
+;;  (setq cycle-buffer-allow-visible t)
+;;  (setq cycle-buffer-show-length 12)
+;;  (setq cycle-buffer-show-format '(" <(%s)>" . " %s")))
+;;
+;; Example without after-body.
+;; (eval-after-autoload-if-found 'smooth-scrolling "smooth-scrolling" nil t)
+;;
+(defmacro eval-after-autoload-if-found (functions file &optional docstring interactive type &rest after-body)
+  "Set up autoload and eval-after-load for FUNCTIONS iff. FILE has found."
+  `(let* ((functions ,functions)
+          (docstring ,docstring)
+          (interactive ,interactive)
+          (type ,type)
+          (file ,file))
+     (when (locate-library file)
+       (mapc (lambda (func)
+               (autoload func file docstring interactive type))
+             (if (listp functions)
+                 functions
+               (list functions)))
+       ,@(when after-body
+           `((eval-after-load file '(progn ,@after-body))))
+       t)))
