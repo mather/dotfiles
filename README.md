@@ -51,3 +51,11 @@ $ wget http://www.emacswiki.org/emacs/download/auto-install.el -O auto-install.e
 
 - `M-x auto-install-update-emacswiki-package-name` : EmacsWikiからパッケージ一覧を取得
 - 参考 : http://qiita.com/ongaeshi/items/e81fca7a9797fe203e9f
+
+Vim, MacVim
+-----------
+
+```
+ln -s ~/.dotfiles/.vimrc ~/.vimrc
+ln -s ~/.dotfiles/.gvimrc ~/.gvimrc
+```
