@@ -9,14 +9,22 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; package.el
 ;; M-x install-elisp http://tromey.com/elpa/package-install.el
+;;(when (require 'package nil t)
+;;  ;; Marmalade repos
+;;  (add-to-list 'package-archives
+;;               '("Marmalade" . "http://marmalade-repo.org/packages/"))
+;;  ;; ELPA repos
+;;  (add-to-list 'package-archives
+;;               '("ELPA" . "http://tromey.com/elpa/"))
+;;  (package-initialize))
 (when (require 'package nil t)
-  ;; Marmalade repos
-  (add-to-list 'package-archives
-               '("Marmalade" . "http://marmalade-repo.org/packages/"))
-  ;; ELPA repos
-  (add-to-list 'package-archives
-               '("ELPA" . "http://tromey.com/elpa/"))
-  (package-initialize))
+  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
+  ;; Initialize package
+  (package-initialize)
+  ;; melpa
+  (require 'melpa)
+  )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; auto-async-byte-compile.el
 ;; M-x install-elisp-from-emacswiki auto-async-byte-compile.el

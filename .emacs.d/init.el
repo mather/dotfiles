@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; load-path
 ;; for Emacs 22 or older
-(when (> emacs-major-version 23)
-  (defvar user-emacs-directory "~/.emacs.d"))
+(when (< emacs-major-version 23)
+  (defvar user-emacs-directory "~/.emacs.d/"))
 
 ;; add load-path recursively
 (defun add-to-load-path (&rest paths)
@@ -14,7 +14,7 @@
             (normal-top-level-add-subdirs-to-load-path))))))
 
 ;; add directories to load-path
-(add-to-load-path "elisp" "conf" "public_repos")
+(add-to-load-path "elisp" "conf" "public_repos" "elpa")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; init-loader.el
 ;; wget "http://coderepos.org/share/browser/lang/elisp/init-loader/init-loader.el?format=txt" -O init-loader.el
@@ -42,7 +42,6 @@
 ;; reject opening messages
 (setq inhibit-startup-message t)
 
-
 ;; Interactively Do Things (highly recommended, but not strictly required)
 (when (require 'ido nil t)
   (ido-mode t))
@@ -59,3 +58,49 @@
 (set-face-foreground 'show-paren-match-face nil)
 (set-face-background 'show-paren-match-face nil)
 (set-face-underline-p 'show-paren-match-face "white")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
+ '(display-battery-mode t)
+ '(display-time-mode t)
+ '(show-paren-mode t)
+ '(size-indication-mode t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+;; eval-after-autoload
+;; https://gist.github.com/cvmat/3499459
+;;
+;; Example with after-body.
+;; (eval-after-autoload-if-found
+;;  '(cycle-buffer cycle-buffer-backward) "cycle-buffer" nil t nil
+;;  (setq cycle-buffer-allow-visible t)
+;;  (setq cycle-buffer-show-length 12)
+;;  (setq cycle-buffer-show-format '(" <(%s)>" . " %s")))
+;;
+;; Example without after-body.
+;; (eval-after-autoload-if-found 'smooth-scrolling "smooth-scrolling" nil t)
+;;
+(defmacro eval-after-autoload-if-found (functions file &optional docstring interactive type &rest after-body)
+  "Set up autoload and eval-after-load for FUNCTIONS iff. FILE has found."
+  `(let* ((functions ,functions)
+          (docstring ,docstring)
+          (interactive ,interactive)
+          (type ,type)
+          (file ,file))
+     (when (locate-library file)
+       (mapc (lambda (func)
+               (autoload func file docstring interactive type))
+             (if (listp functions)
+                 functions
+               (list functions)))
+       ,@(when after-body
+           `((eval-after-load file '(progn ,@after-body))))
+       t)))
