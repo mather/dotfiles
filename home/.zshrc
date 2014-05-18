@@ -42,28 +42,10 @@ ZSH_THEME="crunch"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git ruby osx brew emoji-clock knife vagrant bundler)
 
+# Load .zshrc.d/*.sh
+for f in `ls ~/.zshrc.d/*.sh`
+do
+  source $f
+done
+
 source $ZSH/oh-my-zsh.sh
-
-# Customize to your needs...
-export PATH=/usr/local/var/rbenv/shims:/Users/kuwahataeisuke/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin:/usr/local/mongodb/bin:/Users/kuwahataeisuke/bin/play:$PATH
-
-# Gnu coreutils
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-
-# rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# z
-. `brew --prefix`/etc/profile.d/z.sh
-
-# Java
-export JAVA_HOME=$(/System/Library/Frameworks/JavaVM.framework/Versions/A/Commands/java_home -v "1.7")
-
-## Nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
-# TeX
-export INFOPATH=/usr/local/texlive/2013/texmf-dist/doc/info:$INFOPATH
-export MANPATH=/usr/local/texlive/2013/texmf-dist/doc/man:$MANPATH
-export PATH=/usr/local/texlive/2013/bin/x86_64-darwin:$PATH
