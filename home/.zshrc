@@ -60,8 +60,8 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # Java
 export JAVA_HOME=$(/System/Library/Frameworks/JavaVM.framework/Versions/A/Commands/java_home -v "1.7")
 
-# npm
-export PATH=/usr/local/share/npm/bin:$PATH
+## Nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # TeX
 export INFOPATH=/usr/local/texlive/2013/texmf-dist/doc/info:$INFOPATH

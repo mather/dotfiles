@@ -1,0 +1,29 @@
+[core]
+	editor = vim
+    autocrlf = input
+    precomposeunicode = true  # for OS X
+    excludesfile = ~/.gitignore  # system-wide .gitignore 
+[include]
+    path = ~/.gitconfig.local
+[push]
+    default = simple
+[color]
+	ui = true
+[alias]
+	st = status --short
+    ci = commit -v
+    br = branch
+    ba = branch -a
+    bm = branch --merged
+    bn = branch --no-merged
+    co = checkout
+    ls = log --stat
+    l1 = log --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+    sl = shortlog --email --pretty=format:'%Cgreen%h %Cblue%cr %Creset%s'
+    graph = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+    d1 = diff HEAD~
+    d2 = diff HEAD~2
+    d3 = diff HEAD~3
+    dc = diff --cached
+    conflicts = !git ls-files -u | cut -f 2 | sort -u
+
