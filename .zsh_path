@@ -1,4 +1,0 @@
-## MongoDB
-export PATH=${PATH}:/usr/local/mongodb/bin
-## Play Framework
-export PATH=${PATH}:~/bin/play
