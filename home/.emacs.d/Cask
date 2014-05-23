@@ -2,13 +2,37 @@
 (source melpa)
 (source marmalade)
 
+(depends-on "bind-key")
+(depends-on "cask")
+(depends-on "dash")
+(depends-on "drag-stuff")
+(depends-on "exec-path-from-shell")
+(depends-on "expand-region")
+(depends-on "f")
+(depends-on "flycheck")
+(depends-on "flycheck-cask")
+(depends-on "htmlize")
+(depends-on "idle-highlight-mode")
+(depends-on "magit")
+(depends-on "multiple-cursors")
+(depends-on "nyan-mode")
+(depends-on "pallet")
+(depends-on "popwin")
+(depends-on "prodigy")
+(depends-on "projectile")
+(depends-on "s")
+(depends-on "smartparens")
+(depends-on "smex")
+(depends-on "use-package")
+(depends-on "web-mode")
+(depends-on "yasnippet")
+
+
 (depends-on "init-loader")
 (depends-on "anything")
 (depends-on "auto-async-byte-compile")
 (depends-on "color-theme")
-(depends-on "flycheck")
 (depends-on "undo-tree")
-(depends-on "yasnippet")
 (depends-on "ag")
 (depends-on "zlc")
 
@@ -23,6 +47,7 @@
 (depends-on "rubocop")
 ;; Rails
 (depends-on "rinari")
+(depends-on "rspec-mode")
 
 ;; template-mode
 (depends-on "rhtml-mode")
@@ -33,9 +58,9 @@
 ;; Scala
 (depends-on "scala-mode2")
 
-;; TeX
-(depends-on "yatex-mode" :git "https://github.com/emacsmirror/yatex.git" :tag "yatex-1.77")
-
+;; YaTeX already installed by 'brew install emacs'
+;; (depends-on "yatex-mode" :git "https://github.com/emacsmirror/yatex.git")
+ 
 ;; Markdown
 (depends-on "markdown-mode")
 

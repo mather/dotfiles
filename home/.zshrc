@@ -48,4 +48,6 @@ do
   source $f
 done
 
+export PATH=/usr/local/sbin:$PATH
+
 source $ZSH/oh-my-zsh.sh

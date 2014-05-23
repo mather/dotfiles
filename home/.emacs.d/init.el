@@ -14,7 +14,11 @@
             (normal-top-level-add-subdirs-to-load-path))))))
 
 ;; add directories to load-path
-(add-to-load-path "elisp" "conf" "public_repos")
+;;(add-to-load-path "elisp" "conf" "public_repos")
+
+;;;;;;;;;;;;;;;; Cask
+(require 'cask)
+(cask-initialize)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; init-loader.el
 ;; wget "http://coderepos.org/share/browser/lang/elisp/init-loader/init-loader.el?format=txt" -O init-loader.el
