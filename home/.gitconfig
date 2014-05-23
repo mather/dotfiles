@@ -1,8 +1,8 @@
 [core]
-	editor = vim
+	editor = vim -c \"set fenc=utf-8\"
     autocrlf = input
     precomposeunicode = true  # for OS X
-    excludesfile = ~/.gitignore  # system-wide .gitignore 
+    excludesfile = ~/.gitignore  # system-wide .gitignore
 [include]
     path = ~/.gitconfig.local
 [push]
