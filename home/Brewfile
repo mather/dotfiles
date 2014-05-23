@@ -1,0 +1,17 @@
+# Search old versions
+tap 'homebrew/versions'
+
+install emacs cask
+install coreutils binutils
+install rbenv ruby-build
+install git
+install scala sbt
+
+# homebrew-cask
+tap 'caskroom/cask'
+tap 'caskroom/versions'
+install brew-cask
+
+cask install java java7
+cask install flash adobe-reader
+cask install skim
