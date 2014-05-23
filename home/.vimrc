@@ -21,9 +21,9 @@ set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V
 
 " テーマ
 "=============
-colorscheme elflord
+"colorscheme elflord
 "コメントは灰色に
-hi Comment ctermfg=darkgrey
+"hi Comment ctermfg=darkgrey
 
 " Encoding
 "=============
