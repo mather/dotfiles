@@ -1,0 +1,46 @@
+(source gnu)
+(source melpa)
+(source marmalade)
+
+(depends-on "init-loader")
+(depends-on "anything")
+(depends-on "auto-async-byte-compile")
+(depends-on "color-theme")
+(depends-on "flycheck")
+(depends-on "undo-tree")
+(depends-on "yasnippet")
+(depends-on "ag")
+(depends-on "zlc")
+
+;; git
+(depends-on "egg")
+
+;; Ruby
+(depends-on "ruby-mode")
+(depends-on "ruby-block")
+(depends-on "ruby-electric")
+(depends-on "ruby-end")
+(depends-on "rubocop")
+;; Rails
+(depends-on "rinari")
+
+;; template-mode
+(depends-on "rhtml-mode")
+(depends-on "haml-mode")
+(depends-on "slim-mode")
+(depends-on "sass-mode")
+
+;; Scala
+(depends-on "scala-mode2")
+
+;; TeX
+(depends-on "yatex-mode" :git "https://github.com/emacsmirror/yatex.git" :tag "yatex-1.77")
+
+;; Markdown
+(depends-on "markdown-mode")
+
+;; PHP
+(depends-on "php-mode")
+
+;; Python
+(depends-on "python-mode")
