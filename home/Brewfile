@@ -1,15 +1,18 @@
 # Search old versions
-tap 'homebrew/versions'
+tap 'homebrew/versions' || true
 
-install emacs cask
-install coreutils binutils
-install rbenv ruby-build
-install git
-install scala sbt
+install zsh 
+install emacs 
+install cask || upgrade cask
+install coreutils || true
+install binutils || true
+install rbenv ruby-build || true
+install git || true
+install scala sbt || true
 
 # homebrew-cask
-tap 'caskroom/cask'
-tap 'caskroom/versions'
+tap 'caskroom/cask' || true
+tap 'caskroom/versions' || true
 install brew-cask
 
 cask install java java7
