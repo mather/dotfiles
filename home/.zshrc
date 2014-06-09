@@ -48,6 +48,8 @@ do
   source $f
 done
 
+[ -r $HOME/.zshrc_local ] && source $HOME/.zshrc_local
+
 export PATH=/usr/local/sbin:$PATH
 
 source $ZSH/oh-my-zsh.sh
