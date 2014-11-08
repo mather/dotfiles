@@ -1,10 +1,10 @@
 ;; Cmd-C, Cmd-V を使う
-;(mac-key-mode 1)
+;;(mac-key-mode 1)
 ;; Option キーで Metaを使う。
 (setq mac-option-modifier 'meta)
 
 ;; バッテリー表示
-(display-battery-mode)
+;;(display-battery-mode)
 
 ;; Ricty
 (set-face-attribute 'default nil :family "Ricty" :height 140)

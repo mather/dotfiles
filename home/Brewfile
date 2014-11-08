@@ -1,8 +1,10 @@
+update
+
 # Search old versions
 tap 'homebrew/versions' || true
 
-install zsh 
-install emacs 
+install zsh
+install emacs
 install cask || upgrade cask
 install coreutils || true
 install binutils || true
