@@ -1,6 +1,6 @@
 # For prezto
-# https://github.com/sorin-ionescu/prezto#installation$B$N<j=g(B3$BAjEv$N=hM}$r9T$C$F$$$k!#(B
-# $B$?$@$7%j%s%/$O(B~/$B0J2<$G$O$J$/!"(B($B%j%]%8%H%j(B)/home/$B0J2<$K$*$/!#(B(homesick$B$G=hM}$9$k$?$a(B)
+# https://github.com/sorin-ionescu/prezto#installationの手順3相当の処理を行っている。
+# ただしリンクは~/以下ではなく、(リポジトリ)/home/以下におく。(homesickで処理するため)
 for org in Dir.glob("#{Dir.getwd}/home/.zprezto/runcoms/z*") do
   link = "#{Dir.getwd}/home/.#{File.basename(org)}"
   File.symlink(org, link) unless File.symlink?(link)
