@@ -18,6 +18,8 @@ dotfiles
 - [Homebrew](http://brew.sh/index_ja.html)
 - [Homebrew-bundle](https://github.com/Homebrew/homebrew-bundle)
 
+Brewfileを使ってインストール
+
     $ brew tap Homebrew/bundle
     $ brew bundle
 
