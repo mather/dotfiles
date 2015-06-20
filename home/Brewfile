@@ -1,22 +1,91 @@
-update
-
-# Search old versions
-tap 'homebrew/versions' || true
-
-install zsh
-install emacs
-install cask || upgrade cask
-install coreutils || true
-install binutils || true
-install rbenv ruby-build || true
-install git || true
-install scala sbt || true
-
-# homebrew-cask
-tap 'caskroom/cask' || true
-tap 'caskroom/versions' || true
-install brew-cask
-
-cask install java java7
-cask install flash adobe-reader
-cask install skim
+tap 'caskroom/cask'
+tap 'caskroom/versions'
+tap 'homebrew/bundle'
+tap 'homebrew/x11'
+tap 'sanemat/font'
+brew 'apache-spark'
+brew 'autoconf'
+brew 'xz'
+brew 'automake'
+brew 'bison'
+brew 'pkg-config'
+brew 'libpng'
+brew 'freetype'
+brew 'fontconfig'
+brew 'pixman'
+brew 'gettext'
+brew 'libffi'
+brew 'glib'
+brew 'cairo'
+brew 'emacs'
+brew 'cask'
+brew 'gmp'
+brew 'isl'
+brew 'cloog'
+brew 'ctags'
+brew 'zeromq'
+brew 'czmq'
+brew 'libtool'
+brew 'openssl'
+brew 'unixodbc'
+brew 'jpeg'
+brew 'libtiff'
+brew 'wxmac'
+brew 'erlang'
+brew 'elixir'
+brew 'icu4c'
+brew 'pcre'
+brew 'git'
+brew 'gobject-introspection'
+brew 'harfbuzz'
+brew 'pango'
+brew 'fontforge'
+brew 'mpfr'
+brew 'libmpc'
+brew 'gcc'
+brew 'gd'
+brew 'gdbm'
+brew 'gibo'
+brew 'gitbucket'
+brew 'giter8'
+brew 'readline'
+brew 'lua'
+brew 'gnuplot'
+brew 'heroku-toolbelt'
+brew 'jq'
+brew 'mackup'
+brew 'protobuf'
+brew 'mobile-shell'
+brew 'mysql'
+brew 'nkf'
+brew 'nodebrew'
+brew 'pstree'
+brew 'pyenv'
+brew 'pyenv-virtualenv'
+brew 'pyenv-virtualenvwrapper'
+brew 'sqlite'
+brew 'python'
+brew 'rbenv'
+brew 'rbenv-gem-rehash'
+brew 'rebar'
+brew 'ruby-build'
+brew 'sbt'
+brew 'scala'
+brew 'sl'
+brew 'tig'
+brew 'tree'
+brew 'wget'
+brew 'z'
+brew 'zsh'
+brew 'caskroom/cask/brew-cask'
+brew 'homebrew/x11/pari'
+brew 'sanemat/font/ricty'
+cask 'atom'
+cask 'gimp'
+cask 'intellij-idea-ce'
+cask 'java'
+cask 'java6'
+cask 'java7'
+cask 'macdown'
+cask 'skim'
+cask 'vlc'
