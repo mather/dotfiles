@@ -4,3 +4,12 @@
 .emacs.d/elpa/
 .emacs.d/url/
 !.gitkeep
+
+home/.emacs.d/ido.last
+home/.emacs.d/places
+home/.zlogin
+home/.zlogout
+home/.zpreztorc
+home/.zprofile
+home/.zshenv
+home/.zshrc
