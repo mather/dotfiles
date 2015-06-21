@@ -11,7 +11,7 @@ dotfiles
 
 リポジトリをclone
 
-    $ homesick clone https://github.com/technicalpickles/homesick
+    $ homesick clone git@github.com:mather/dotfiles.git
 
 ### Homebrew
 
