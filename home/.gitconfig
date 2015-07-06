@@ -29,3 +29,7 @@
 
 [http]
 	postBuffer = 524288000
+
+[user]
+    name = mather
+    email = mather314@gmail.com
