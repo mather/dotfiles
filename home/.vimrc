@@ -19,12 +19,6 @@ syntax on
 " ステータスライン
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 
-" テーマ
-"=============
-"colorscheme elflord
-"コメントは灰色に
-"hi Comment ctermfg=darkgrey
-
 " Encoding
 "=============
 set encoding=utf-8 " Default encoding
@@ -68,15 +62,20 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'derekwyatt/vim-scala'
 
+" solarized
+NeoBundle 'altercation/vim-colors-solarized'
+
 " Add or remove your Bundles here:
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
+"NeoBundle 'tpope/vim-fugitive'
+"NeoBundle 'ctrlpvim/ctrlp.vim'
+"NeoBundle 'flazz/vim-colorschemes'
 
 " You can specify revision/branch/tag.
-NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+"NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
 " Required:
 call neobundle#end()
@@ -88,3 +87,11 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
+
+" カラースキーマ
+"=============
+"colorscheme elflord
+"コメントは灰色に
+"hi Comment ctermfg=darkgrey
+colorscheme solarized
+
