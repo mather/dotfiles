@@ -1,6 +1,7 @@
 " Vim設定
 "=============
 set nocompatible " vi互換モードを解除
+set notitle
 
 " 表示
 "=============
